@@ -1,6 +1,12 @@
 # 📊 Educational Inequality Modeling – ENEM 2023 Analysis
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Project Type](https://img.shields.io/badge/Type-Applied%20Data%20Science-orange)
+
+---
+
+## 📌 Overview
 
 This repository contains the analytical framework developed for my MBA capstone project in Big Data & Analytics (FIA Business School – LABDATA).
 
@@ -8,16 +14,16 @@ The project investigates how **school infrastructure** and **socioeconomic varia
 
 The central research question:
 
-> To what extent can we model and predict educational performance using structural and socioeconomic indicators?
+> To what extent can educational inequality be modeled and predicted using structural and socioeconomic indicators?
 
 ---
 
 ## 🎯 Objectives
 
-- Quantify the impact of school infrastructure variables on academic performance
-- Evaluate the predictive power of socioeconomic indicators
-- Build classification models to estimate risk of low academic performance
-- Extract interpretable insights to support data-driven educational strategies
+- Quantify the impact of school infrastructure on academic performance  
+- Evaluate the predictive power of socioeconomic indicators  
+- Build classification models to estimate risk of low academic performance  
+- Extract interpretable insights to support data-driven educational strategies  
 
 ---
 
@@ -27,7 +33,11 @@ The central research question:
 - Brazilian School Census (INEP)
 - Municipal-level indicators (IBGE)
 
-> Raw microdata is not included in this repository due to size and licensing constraints. See the Reproducibility section for instructions.
+### Data Disclaimer
+
+All datasets used in this project are publicly available through official Brazilian government portals (INEP and IBGE).
+
+Raw microdata is **not included** in this repository due to size and licensing considerations.
 
 ---
 
@@ -35,14 +45,19 @@ The central research question:
 
 ```
 
-├── data/
-│   ├── raw/              # External datasets (not versioned)
-│   └── processed/        # Cleaned datasets
-├── notebooks/            # Jupyter notebooks (EDA & modeling)
-├── src/                  # Reusable scripts and functions
-├── outputs/              # Model results, plots and reports
-├── assets/               # Presentation files and visual material
+enem-infra-socioeconomia-ml/
+│
+├── notebooks/
+│   └── TCC-2.ipynb
+│
+├── src/
+│   └── modeling scripts (if applicable)
+│
+├── assets/
+│   └── Presentation and visual materials
+│
 ├── requirements.txt
+├── .gitignore
 └── README.md
 
 ```
@@ -51,48 +66,59 @@ The central research question:
 
 ## 🧪 Methodology
 
-### 1. Data Engineering
-- Cleaning and preprocessing large-scale microdata
+### 1️⃣ Data Engineering
+- Large-scale microdata cleaning
 - Handling missing values
 - Feature engineering
 - Municipal-level aggregation
 
-### 2. Exploratory Data Analysis (EDA)
+### 2️⃣ Exploratory Data Analysis
 - Correlation analysis
 - Distribution mapping
-- Infrastructure coverage evaluation
-- Socioeconomic pattern identification
+- Infrastructure coverage assessment
+- Socioeconomic pattern evaluation
 
-### 3. Statistical Modeling
-- Linear regression (infrastructure-only baseline model)
+### 3️⃣ Statistical Modeling
+- Linear regression (infrastructure-only baseline)
 - Multivariate regression including socioeconomic controls
 
-### 4. Machine Learning
+### 4️⃣ Machine Learning
 Models tested:
-- Logistic Regression
-- Random Forest
-- Gradient Boosting
-- XGBoost (selected final model)
 
-### 5. Model Evaluation
-- ROC-AUC
-- Sensitivity (Recall)
-- Feature importance
-- Risk simulation scenarios
-- Interpretability analysis (SHAP values)
+- Logistic Regression  
+- Random Forest  
+- Gradient Boosting  
+- XGBoost (final selected model)
+
+### 5️⃣ Model Evaluation
+
+- ROC-AUC  
+- Sensitivity (Recall)  
+- Feature Importance  
+- Risk Simulation Scenarios  
+- SHAP interpretability analysis  
 
 ---
 
-## 📈 Key Findings
+## 📈 Model Performance
 
-- Infrastructure explains a significant portion of municipal-level variation.
-- Socioeconomic variables demonstrate stronger predictive power.
-- XGBoost achieved:
-  - AUC ≈ 0.73
-  - Sensitivity ≈ 77%
+| Model                | AUC  | Sensitivity |
+|----------------------|------|------------|
+| Logistic Regression  | ~0.xx | xx% |
+| Random Forest        | ~0.xx | xx% |
+| XGBoost              | **0.73** | **77%** |
+
+The selected model (XGBoost) demonstrated the best balance between predictive performance and interpretability.
+
+---
+
+## 🔍 Key Findings
+
+- Infrastructure explains a significant portion of performance variation.
+- Socioeconomic variables show stronger predictive power.
 - It is possible to estimate probability of low academic performance based on student profile characteristics.
 
-The inequality is not random — it is statistically structured and predictable.
+Educational inequality is not random — it is statistically structured and predictable.
 
 ---
 
@@ -118,11 +144,11 @@ pip install -r requirements.txt
 
 ```
 
-5. Run notebooks in the following order:
-- Data preprocessing
-- EDA
-- Modeling
-- Evaluation
+5. Run notebooks in order:
+   - Data preprocessing
+   - Exploratory analysis
+   - Modeling
+   - Evaluation
 
 ---
 
@@ -139,9 +165,11 @@ pip install -r requirements.txt
 
 ---
 
-## 📌 Research Context
+## 🎓 Research Context
 
-This project was developed as part of an MBA in Big Data & Analytics and aims to explore how predictive modeling can support strategic decision-making in education.
+This project was developed as part of an MBA in Big Data & Analytics.
+
+Beyond academic analysis, it explores how predictive modeling can support strategic decision-making in education and reduce structural inequality through data-driven insights.
 
 ---
 
@@ -151,4 +179,10 @@ Pedro Henrique Lofiego Sampaio da Silva
 MBA in Big Data & Analytics – FIA Business School  
 Data & Strategy Enthusiast  
 
-```
+---
+
+## 📬 Contact
+
+Feel free to connect via LinkedIn or open an issue for discussion.
+
+Qual posicionamento você quer reforçar com esse repositório?
